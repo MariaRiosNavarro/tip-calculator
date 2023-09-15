@@ -19,7 +19,7 @@ html {
 }
 
 h1 {
-  padding: 2rem;
+  padding: 5rem 2rem 2rem 2rem;
   text-align: center;
 }
 
@@ -30,7 +30,6 @@ form {
   border: 1px solid green;
   border-radius: 8px;
   padding: 1rem;
-  width: 500px;
 }
 
 label,
@@ -44,6 +43,8 @@ select {
 
 .output {
   height: 350px;
+  max-width: 375px;
+  overflow-y: auto;
 }
 
 .output h3 {

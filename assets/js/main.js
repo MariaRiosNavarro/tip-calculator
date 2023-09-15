@@ -40,6 +40,8 @@ const goodTip = 20;
 let resultTip = 0;
 
 function calculateTip() {
+  // add this line, to remove the warning red color if the form was empty
+  totalTip.style.backgroundColor = "transparent";
   //save all inputs values as number
   let billNumber = Number(bill.value);
   console.log("billNumber", typeof billNumber);
@@ -52,6 +54,7 @@ function calculateTip() {
   console.log(serviceValue);
 
   //  # Additional check for empty input fields, and exit the function because the input is invalid.
+
   if (
     isNaN(billNumber) ||
     isNaN(peopleNumber) ||
@@ -61,6 +64,10 @@ function calculateTip() {
     totalTip.innerHTML =
       "Bitte geben Sie einen gültigen Rechnungsbetrag und eine gültige Anzahl der Personen ein.";
     totalTip.style.backgroundColor = "red";
+    totalBill.innerHTML = "";
+    partialTip.innerHTML = "";
+    partialBill.innerHTML = "";
+    wrapper.style.backgroundColor = "lightgray";
     return;
   }
 
