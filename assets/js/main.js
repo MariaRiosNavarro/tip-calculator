@@ -72,35 +72,44 @@ function calculateTip() {
 
   console.log("calculate result");
 
-  // !(we round the result with => Math.round(number * 100) / 100;)
-
-  const round = (number) => Math.round(number * 100) / 100;
+  // ! There are 2 posibilities to round the numbers to 2 decimals
+  //   ! option (convert to string) 1-> .toFixed(2)
+  //   ! option 2 (remains a number)-> Math.round(number * 100) / 100;)  const round = (number) => Math.round(number * 100) / 100;
 
   //  round our resultTip only for the Output
 
-  let roundTip = round(resultTip);
+  let roundTip = resultTip.toFixed(2);
   console.log({ roundTip });
+  console.log(typeof roundTip);
 
   // calculate the total with the tip
 
   let resultTotalBill = resultTip + billNumber;
   console.log({ resultTotalBill });
-  let roundTotalBill = round(resultTotalBill);
+  let roundTotalBill = resultTotalBill.toFixed(2);
   console.log({ roundTotalBill });
+  console.log(typeof roundTotalBill);
 
   //  calculate the partial tip with the people number
 
   let resultPartialTip = resultTip / peopleNumber;
   console.log({ resultPartialTip });
-  let roundPartialTip = round(resultPartialTip);
+  let roundPartialTip = resultPartialTip.toFixed(2);
   console.log({ roundPartialTip });
+  console.log(typeof roundPartialTip);
 
   //  calculate the partial  bill  with tip with the people number
 
   let resultPartialBill = resultTotalBill / peopleNumber;
   console.log({ resultPartialBill });
-  let roundPartialBill = round(resultPartialBill);
+  let roundPartialBill = resultPartialBill.toFixed(2);
   console.log({ roundPartialBill });
+  console.log(typeof roundPartialBill);
 
   //   ! Outputs
+
+  totalTip.innerHTML = `Die Gesamttrinkgeldmenge beträgt € ${roundTip}`;
+  totalBill.innerHTML = `Die Gesamtrechnung beträgt € ${roundTotalBill}`;
+  partialTip.innerHTML = `Jeder muss € ${roundPartialTip} Trinkgeld zahlen`;
+  partialBill.innerHTML = `Jeder muss € ${roundPartialBill} für die komplete Rechnung mit Trinkeld bezahlen`;
 }
