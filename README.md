@@ -4,7 +4,9 @@
 
 # [Deployment](https://mariariosnavarro.github.io/tip-calculator/)
 
-![](/assets/img/nodata.png)
-![](/assets/img/green.png)
-![](/assets/img/middle.png)
-![](/assets/img/red.png)
+<div>
+<img src="./assets/img/nodata.png" width ="100px" alt="pic">
+<img src="./assets/img/green.png"  width ="100px" alt="pic">
+<img src="./assets/img/middle.png"  width ="100px" alt="pic">
+<img src="./assets/img/red.png"  width ="100px" alt="pic">
+<div>
