@@ -30,6 +30,7 @@ form {
   border: 1px solid green;
   border-radius: 8px;
   padding: 1rem;
+  width: 500px;
 }
 
 label,
@@ -42,9 +43,11 @@ select {
 }
 
 .output {
-  height: 150px;
+  height: 350px;
 }
 
 .output h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 1rem;
 }

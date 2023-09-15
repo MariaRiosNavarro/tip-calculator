@@ -51,7 +51,20 @@ function calculateTip() {
   console.log("serviceValue", typeof serviceValue);
   console.log(serviceValue);
 
-  //   help function:
+  //  # Additional check for empty input fields, and exit the function because the input is invalid.
+  if (
+    isNaN(billNumber) ||
+    isNaN(peopleNumber) ||
+    billNumber <= 0 ||
+    peopleNumber <= 0
+  ) {
+    totalTip.innerHTML =
+      "Bitte geben Sie einen gültigen Rechnungsbetrag und eine gültige Anzahl der Personen ein.";
+    totalTip.style.backgroundColor = "red";
+    return;
+  }
+
+  //   tip calculate function:
 
   const tipCalculate = (percent, billNumber) => (percent / 100) * billNumber;
 
@@ -67,11 +80,14 @@ function calculateTip() {
     console.log("with good tip is", resultTip);
     // extra
     wrapper.style.backgroundColor = "green";
-  } else {
+  } else if (serviceValue === "middle") {
     resultTip = tipCalculate(middleTip, billNumber);
     console.log("with middle tip is", resultTip);
     // extra
     wrapper.style.backgroundColor = "yellow";
+  } else {
+    resultTip = "";
+    wrapper.style.backgroundColor = "lightgray";
   }
 
   console.log(wrapper.style.backgroundColor);
