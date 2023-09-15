@@ -53,7 +53,7 @@ function calculateTip() {
   console.log("serviceValue", typeof serviceValue);
   console.log(serviceValue);
 
-  //  # Additional check for empty input fields, and exit the function because the input is invalid.
+  //  # Additional check for empty input fields, and exit the function because the input is invalid (early return).
 
   if (
     isNaN(billNumber) ||
