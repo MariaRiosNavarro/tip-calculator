@@ -31,7 +31,7 @@ console.log({ wrapper });
 
 console.log("-------function---logs");
 
-// initial Variables
+// initial Variables (I save the Tip in Varibles, so that we can change the values in the future, if we need it)
 
 const badTip = 2;
 const middleTip = 10;
