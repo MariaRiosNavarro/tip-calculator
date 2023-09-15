@@ -60,17 +60,21 @@ function calculateTip() {
   if (serviceValue === "bad") {
     resultTip = tipCalculate(badTip, billNumber);
     console.log("with bad tip is", resultTip);
-  } else if (service === "good") {
+    // extra
+    wrapper.style.backgroundColor = "red";
+  } else if (serviceValue === "good") {
     resultTip = tipCalculate(goodTip, billNumber);
     console.log("with good tip is", resultTip);
+    // extra
+    wrapper.style.backgroundColor = "green";
   } else {
     resultTip = tipCalculate(middleTip, billNumber);
     console.log("with middle tip is", resultTip);
+    // extra
+    wrapper.style.backgroundColor = "yellow";
   }
 
-  console.log("selected tip", resultTip);
-
-  console.log("calculate result");
+  console.log(wrapper.style.backgroundColor);
 
   // ! There are 2 posibilities to round the numbers to 2 decimals
   //   ! option (convert to string) 1-> .toFixed(2)
@@ -112,4 +116,6 @@ function calculateTip() {
   totalBill.innerHTML = `Die Gesamtrechnung beträgt € ${roundTotalBill}`;
   partialTip.innerHTML = `Jeder muss € ${roundPartialTip} Trinkgeld zahlen`;
   partialBill.innerHTML = `Jeder muss € ${roundPartialBill} für die komplete Rechnung mit Trinkeld bezahlen`;
+
+  // extra : add in if/else change the background if the service was good/bad or neutral
 }
