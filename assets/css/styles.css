@@ -20,6 +20,7 @@ html {
 
 h1 {
   padding: 2rem;
+  text-align: center;
 }
 
 form {
@@ -37,4 +38,5 @@ select {
   margin: 0.5rem;
   border-radius: 4px;
   border: none;
+  font-size: 2rem;
 }

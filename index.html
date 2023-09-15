@@ -8,7 +8,7 @@
     <title>Tip Calculator</title>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper" data-js="wrapper">
       <main>
         <form onsubmit="calculateTip()">
           <h1>Trinkeldrechner</h1>
@@ -27,6 +27,7 @@
             </option>
             <option value="good" data-js="good-service">Super Service</option>
           </select>
+          <input type="submit" value="Berechne" />
           <div data-js="output">
             <h3 data-js="total-tip"></h3>
             <h3 data-js="total-bill"></h3>
