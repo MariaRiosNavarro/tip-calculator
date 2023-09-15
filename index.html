@@ -9,10 +9,32 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <h1>Tip Calculator</h1>
-      </header>
-      <main></main>
+      <main>
+        <form onsubmit="calculateTip()">
+          <h1>Trinkeldrechner</h1>
+          <label for="bill">Wie hoch war die Rechnung?</label>
+          <input type="number" id="bill" name="bill" data-js="bill" />
+          <label for="people"
+            >Wie viele Menschen teilen sich die Rechnung</label
+          >
+          <input type="number" id="people" name="people" data-js="people" />
+          <select name="" id="">
+            <option value="bad" data-js="bad-service">
+              Schlechter Service
+            </option>
+            <option value="middle" data-js="middle-service">
+              Mittlerer Service
+            </option>
+            <option value="good" data-js="good-service">Super Service</option>
+          </select>
+          <div data-js="output">
+            <h3 data-js="total-tip"></h3>
+            <h3 data-js="total-bill"></h3>
+            <h3 data-js="partial-tip"></h3>
+            <h3 data-js="partial-bill"></h3>
+          </div>
+        </form>
+      </main>
     </div>
   </body>
 </html>
