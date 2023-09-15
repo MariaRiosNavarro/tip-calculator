@@ -29,8 +29,6 @@ let wrapper = document.querySelector('[data-js="wrapper"]');
 
 // !     ---------------------- main Function
 
-console.log("-------function---logs");
-
 // initial Variables (I save the Tip in Varibles, so that we can change the values in the future, if we need it)
 
 const badTip = 2;
