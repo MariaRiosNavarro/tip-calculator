@@ -9,6 +9,6 @@
 <div>
 <img src="./assets/img/nodata.png" width ="250px" alt="pic">
 <img src="./assets/img/green.png"  width ="250px" alt="pic">
-<img src="./assets/img/middle.png"  width ="250px" alt="pic">
+<img src="./assets/img/yellow.png"  width ="250px" alt="pic">
 <img src="./assets/img/red.png"  width ="250px" alt="pic">
 <div>
