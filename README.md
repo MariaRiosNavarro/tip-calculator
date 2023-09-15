@@ -5,8 +5,8 @@
 # [Deployment](https://mariariosnavarro.github.io/tip-calculator/)
 
 <div>
-<img src="./assets/img/nodata.png" width ="100px" alt="pic">
-<img src="./assets/img/green.png"  width ="100px" alt="pic">
-<img src="./assets/img/middle.png"  width ="100px" alt="pic">
-<img src="./assets/img/red.png"  width ="100px" alt="pic">
+<img src="./assets/img/nodata.png" width ="250px" alt="pic">
+<img src="./assets/img/green.png"  width ="250px" alt="pic">
+<img src="./assets/img/middle.png"  width ="250px" alt="pic">
+<img src="./assets/img/red.png"  width ="250px" alt="pic">
 <div>
