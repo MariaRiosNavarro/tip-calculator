@@ -6,12 +6,10 @@ let bill = document.querySelector('[data-js="bill"]');
 console.log({ bill });
 let people = document.querySelector('[data-js="people"]');
 console.log({ people });
-let optionBad = document.querySelector('[data-js="bad-service"]');
-console.log({ optionBad });
-let optionMiddle = document.querySelector('[data-js="middle-service"]');
-console.log({ optionMiddle });
-let optionGood = document.querySelector('[data-js="good-service"]');
-console.log({ optionGood });
+
+// value of the service (options) will be extract in the main function
+
+let service = document.querySelector('[data-js="service"]');
 
 // outputs
 
@@ -28,3 +26,81 @@ console.log({ partialBill });
 
 let wrapper = document.querySelector('[data-js="wrapper"]');
 console.log({ wrapper });
+
+// !     ---------------------- main Function
+
+console.log("-------function---logs");
+
+// initial Variables
+
+const badTip = 2;
+const middleTip = 10;
+const goodTip = 20;
+
+let resultTip = 0;
+
+function calculateTip() {
+  //save all inputs values as number
+  let billNumber = Number(bill.value);
+  console.log("billNumber", typeof billNumber);
+  let peopleNumber = Number(people.value);
+  console.log("peopleNumber", typeof billNumber);
+
+  //save the selected option of service
+  let serviceValue = service.value;
+  console.log("serviceValue", typeof serviceValue);
+  console.log(serviceValue);
+
+  //   help function:
+
+  const tipCalculate = (percent, billNumber) => (percent / 100) * billNumber;
+
+  //   calculate  resultTip with the selected condition
+
+  if (serviceValue === "bad") {
+    resultTip = tipCalculate(badTip, billNumber);
+    console.log("with bad tip is", resultTip);
+  } else if (service === "good") {
+    resultTip = tipCalculate(goodTip, billNumber);
+    console.log("with good tip is", resultTip);
+  } else {
+    resultTip = tipCalculate(middleTip, billNumber);
+    console.log("with middle tip is", resultTip);
+  }
+
+  console.log("selected tip", resultTip);
+
+  console.log("calculate result");
+
+  // !(we round the result with => Math.round(number * 100) / 100;)
+
+  const round = (number) => Math.round(number * 100) / 100;
+
+  //  round our resultTip only for the Output
+
+  let roundTip = round(resultTip);
+  console.log({ roundTip });
+
+  // calculate the total with the tip
+
+  let resultTotalBill = resultTip + billNumber;
+  console.log({ resultTotalBill });
+  let roundTotalBill = round(resultTotalBill);
+  console.log({ roundTotalBill });
+
+  //  calculate the partial tip with the people number
+
+  let resultPartialTip = resultTip / peopleNumber;
+  console.log({ resultPartialTip });
+  let roundPartialTip = round(resultPartialTip);
+  console.log({ roundPartialTip });
+
+  //  calculate the partial  bill  with tip with the people number
+
+  let resultPartialBill = resultTotalBill / peopleNumber;
+  console.log({ resultPartialBill });
+  let roundPartialBill = round(resultPartialBill);
+  console.log({ roundPartialBill });
+
+  //   ! Outputs
+}

@@ -10,7 +10,7 @@
   <body>
     <div class="wrapper" data-js="wrapper">
       <main>
-        <form onsubmit="calculateTip()">
+        <form onsubmit="calculateTip(); return false">
           <h1>Trinkeldrechner</h1>
           <label for="bill">Wie hoch war die Rechnung?</label>
           <input type="number" id="bill" name="bill" data-js="bill" />
@@ -18,11 +18,11 @@
             >Wie viele Menschen teilen sich die Rechnung</label
           >
           <input type="number" id="people" name="people" data-js="people" />
-          <select name="" id="">
+          <select name="service" id="service" data-js="service">
             <option value="bad" data-js="bad-service">
               Schlechter Service
             </option>
-            <option value="middle" data-js="middle-service">
+            <option value="middle" data-js="middle-service" selected>
               Mittlerer Service
             </option>
             <option value="good" data-js="good-service">Super Service</option>
