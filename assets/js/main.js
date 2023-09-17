@@ -40,9 +40,14 @@ let resultTip = 0;
 function calculateTip() {
   // add this line, to remove the warning red color if the form was empty
   totalTip.style.backgroundColor = "transparent";
-  //save all inputs values as number
-  let billNumber = Number(bill.value);
-  // console.log("billNumber", typeof billNumber);
+  //  save Bill as Value
+  let billValue = bill.value;
+  //save all text-inputs als decimal number and change , to . so that js recognice the number as float.
+  //
+  let billNumber = parseFloat(billValue.replace(",", "."));
+  // console.log({ billNumber });
+  // console.log(typeof billNumber);
+
   let peopleNumber = Number(people.value);
   // console.log("peopleNumber", typeof billNumber);
 
@@ -73,23 +78,23 @@ function calculateTip() {
 
   const tipCalculate = (percent, billNumber) => (percent / 100) * billNumber;
 
-  //   calculate  resultTip with the selected condition
+  //   !calculate  resultTip with the selected condition
 
   if (serviceValue === "bad") {
     resultTip = tipCalculate(badTip, billNumber);
     // console.log("with bad tip is", resultTip);
     // extra
-    wrapper.style.backgroundColor = "red";
+    wrapper.style.backgroundColor = "lightcoral";
   } else if (serviceValue === "good") {
     resultTip = tipCalculate(goodTip, billNumber);
     // console.log("with good tip is", resultTip);
     // extra
-    wrapper.style.backgroundColor = "green";
+    wrapper.style.backgroundColor = "lightgreen";
   } else if (serviceValue === "middle") {
     resultTip = tipCalculate(middleTip, billNumber);
     // console.log("with middle tip is", resultTip);
     // extra
-    wrapper.style.backgroundColor = "yellow";
+    wrapper.style.backgroundColor = "lightyellow";
   } else {
     resultTip = "";
     wrapper.style.backgroundColor = "lightgray";
@@ -133,8 +138,15 @@ function calculateTip() {
 
   totalTip.innerHTML = `Die Gesamttrinkgeldmenge beträgt € ${roundTip}`;
   totalBill.innerHTML = `Die Gesamtrechnung beträgt € ${roundTotalBill}`;
-  partialTip.innerHTML = `Jeder muss € ${roundPartialTip} Trinkgeld zahlen`;
-  partialBill.innerHTML = `Jeder muss € ${roundPartialBill} für die komplete Rechnung mit Trinkeld bezahlen`;
 
+  //  !In the case that only is one person, we dont need the 2 last messages
+
+  if (peopleNumber > 1) {
+    partialTip.innerHTML = `Jeder muss € ${roundPartialTip} Trinkgeld zahlen`;
+    partialBill.innerHTML = `Jeder muss € ${roundPartialBill} für die komplete Rechnung mit Trinkeld bezahlen`;
+  } else {
+    partialTip.innerHTML = "";
+    partialBill.innerHTML = "";
+  }
   // extra : add in if/else change the background if the service was good/bad or neutral
 }
