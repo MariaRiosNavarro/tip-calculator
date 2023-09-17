@@ -13,7 +13,12 @@
         <form onsubmit="calculateTip(); return false">
           <h1>Trinkgeldrechner</h1>
           <label for="bill">Wie hoch war die Rechnung?</label>
-          <input type="number" id="bill" name="bill" data-js="bill" />
+          <!--# by putting an input as text instead of as a number, 
+            we enable the user to give exact numbers and with decimals
+            if necessary. then in js with parseFloat we will transform
+            to a decimal number. -->
+
+          <input type="text" id="bill" name="bill" data-js="bill" />
           <label for="people"
             >Wie viele Menschen teilen sich die Rechnung</label
           >
