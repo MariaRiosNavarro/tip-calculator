@@ -12,4 +12,5 @@
 <img src="./assets/img/green.png"  width ="300px" alt="pic">
 <img src="./assets/img/yellow.png"  width ="300px" alt="pic">
 <img src="./assets/img/red.png"  width ="300px" alt="pic">
+<img src="./assets/img/onlyone.png"  width ="300px" alt="pic">
 <div>
