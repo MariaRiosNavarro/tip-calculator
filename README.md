@@ -7,6 +7,7 @@
 # [Deployment](https://mariariosnavarro.github.io/tip-calculator/)
 
 <div>
+<img src="./assets/img/initial.png" width ="300px" alt="pic">
 <img src="./assets/img/nodata.png" width ="300px" alt="pic">
 <img src="./assets/img/green.png"  width ="300px" alt="pic">
 <img src="./assets/img/yellow.png"  width ="300px" alt="pic">
